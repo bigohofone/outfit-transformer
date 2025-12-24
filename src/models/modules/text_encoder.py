@@ -99,7 +99,7 @@ class HuggingFaceTextEncoder(BaseTextEncoder):
         tokenizer_kargs['return_tensors'] = 'pt'
         
         inputs = self.tokenizer(
-            texts, **self.tokenizer_args
+            texts, **tokenizer_kargs
         )
         inputs = {
             key: value.to(self.device) for key, value in inputs.items()
