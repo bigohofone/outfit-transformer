@@ -71,7 +71,7 @@ class FocalLoss(nn.Module):
     def forward(
         self, y_prob: torch.Tensor, y_true: torch.Tensor,
     ) -> torch.Tensor:
-        ce_loss = F.binary_cross_entropy_with_logits(y_prob, y_true, reduction="none")
+        ce_loss = F.binary_cross_entropy(y_prob, y_true, reduction="none")
         p_t = y_prob * y_true + (1 - y_prob) * (1 - y_true)
         loss = ce_loss * ((1 - p_t) ** self.gamma)
 
@@ -89,3 +89,4 @@ class FocalLoss(nn.Module):
 
 def safe_divide(a, b, eps=1e-7):
     return a / (b + eps)
+
