@@ -44,11 +44,6 @@ conda env update -f environment.yml
 ## 📥 Download Datasets & Checkpoints
 
 ```bash
-mkdir -p datasets
-gdown --id 1ox8GFHG8iMs64iiwITQhJ47dkQ0Q7SBu -O polyvore.zip
-unzip polyvore.zip -d ./datasets/polyvore
-rm polyvore.zip
-
 mkdir -p checkpoints
 gdown --id 1mzNqGBmd8UjVJjKwVa5GdGYHKutZKSSi -O checkpoints.zip
 unzip checkpoints.zip -d ./checkpoints
@@ -123,5 +118,6 @@ This is a non-official implementation of the Outfit Transformer model. The offic
 ## 📝 License
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
+
 
 If you use this repository, please mention the original GitHub repository by linking to [outfit-transformer](https://github.com/owj0421/outfit-transformer). This helps support the project and acknowledges the contributors.
